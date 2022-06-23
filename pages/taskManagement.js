@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Meta from "../components/Meta";
 
-const about = () => {
+const taskManagement = () => {
   return (
     <div>
-      <Meta title="About | XingLi News" />
-      <h1>This is About page.</h1>
+      <Meta title="TaskManagement | XingLi News" />
+      <h1>This is Taskmanagement page.</h1>
       <Link href="/">
         <div className="divStyle">
           <button className="btn">Go Homepage</button>
@@ -15,4 +15,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default taskManagement;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { useState } from "react";
 import styles from "../styles/Layout.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -6,15 +6,11 @@ import Nav from "./Nav";
 import Meta from "./Meta";
 
 const Layout = ({ children }) => {
-  const [flag, setFlag] = useState(false);
+  // const [flag, setFlag] = useState(false);
 
-  const onHandleClick = () => {
-    setFlag(!flag);
-  };
-
-  useEffect(() => {
-    console.log("[FLAG]", flag);
-  }, [flag]);
+  // const onHandleClick = () => {
+  //   setFlag(!flag);
+  // };
 
   return (
     <>
@@ -23,14 +19,14 @@ const Layout = ({ children }) => {
       <div className={styles.container}>
         <main className={styles.main}>
           <Header />
-          {flag ? (
+          {/* {flag ? (
             <h1 style={{ color: "red" }}>Hello</h1>
           ) : (
             <h1 style={{ color: "blue" }}>Welcome</h1>
           )}
-          <button className="btn" onClick={onHandleClick}>
+          <button className="btn" onClick={() => setFlag(!flag)}>
             Button
-          </button>
+          </button> */}
           {children}
           <Footer />
         </main>

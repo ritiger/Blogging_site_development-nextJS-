@@ -12,6 +12,9 @@ const Nav = () => {
           <Link href="/about">About</Link>
         </li>
         <li>
+          <Link href="/taskManagement">TaskManagement</Link>
+        </li>
+        <li>
           <Link href="/version">Version</Link>
         </li>
       </ul>
