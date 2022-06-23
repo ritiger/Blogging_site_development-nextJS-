@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Layout.module.css";
 import Header from "./Header";
+import Footer from "./Footer";
 import Nav from "./Nav";
 import Meta from "./Meta";
 
@@ -27,8 +28,11 @@ const Layout = ({ children }) => {
           ) : (
             <h1 style={{ color: "blue" }}>Welcome</h1>
           )}
-          <button onClick={onHandleClick}>Button</button>
+          <button className="btn" onClick={onHandleClick}>
+            Button
+          </button>
           {children}
+          <Footer />
         </main>
       </div>
     </>
