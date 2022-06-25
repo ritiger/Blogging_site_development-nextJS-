@@ -1,18 +1,30 @@
+import { useState } from "react";
 import Link from "next/link";
 import Meta from "../components/Meta";
 
-const taskManagement = () => {
+import Header from "../components/tasksComponents/Header";
+import Home from "../components/tasksComponents/Home";
+
+const TaskManagement = () => {
+  const [showAddTask, setShowAddTask] = useState(false);
+
   return (
     <div>
       <Meta title="TaskManagement | XingLi News" />
-      <h1>This is Taskmanagement page.</h1>
+      <div className="container">
+        <Header
+          onShow={() => setShowAddTask(!showAddTask)}
+          showAddTask={showAddTask}
+        />
+        <Home showAddTask={showAddTask} />
+      </div>
       <Link href="/">
         <div className="divStyle">
-          <button className="btn">Go Homepage</button>
+          <button className="btnStyle">Go Homepage</button>
         </div>
       </Link>
     </div>
   );
 };
 
-export default taskManagement;
+export default TaskManagement;

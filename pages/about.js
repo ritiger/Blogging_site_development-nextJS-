@@ -8,7 +8,7 @@ const about = () => {
       <h1>This is About page.</h1>
       <Link href="/">
         <div className="divStyle">
-          <button className="btn">Go Homepage</button>
+          <button className="btnStyle">Go Homepage</button>
         </div>
       </Link>
     </div>
